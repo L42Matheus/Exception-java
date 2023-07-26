@@ -35,7 +35,7 @@ public class Reservation {
     }
 
     public long duration(){
-        long diff = checkin.getTime() - checkin.getTime();
+        long diff = checkout.getTime() - checkin.getTime();
         //Converte milissegundo para dia
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
@@ -55,6 +55,6 @@ public class Reservation {
                 + simpleDateFormat.format(checkout)
                 + ", "
                 + duration()
-                + "nigths";
+                + " nigths";
     }
 }
