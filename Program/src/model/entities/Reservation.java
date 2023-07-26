@@ -1,6 +1,7 @@
 package model.entities;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class Reservation {
 
@@ -29,5 +30,10 @@ public class Reservation {
     public Date getCheckout() {
         return checkout;
     }
-    
+
+    public long duration(){
+        long diff = checkin.getTime() - checkin.getTime();
+        //Converte milissegundo para dia
+        return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+    }
 }
