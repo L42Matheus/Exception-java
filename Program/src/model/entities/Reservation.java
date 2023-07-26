@@ -36,4 +36,9 @@ public class Reservation {
         //Converte milissegundo para dia
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
+
+    public void updateDates(Date checkin, Date checkout){
+        this.checkin = checkin;
+        this.checkout = checkout;
+    }
 }
